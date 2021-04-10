@@ -1,3 +1,10 @@
+// - COMPILAZIONE -
+// la prima volta usare <run>
+// per compilare con la libreria:
+// gcc main.c mylib.c -o prog
+// esecuzione:
+// ./prog
+
 #include "mylib.h"
 
 
@@ -9,7 +16,7 @@ int insvect(int vect[])
 
     do
     {
-    printf("inserisci dimensione:\n");
+    printf("inserisci dimensione (max %d):\n",MAXVETT);
     scanf("%d",&dim);
     }while((dim<2)||(dim>MAXVETT));  
     for(i=0; i<dim; i++)
@@ -41,7 +48,7 @@ int ord_sost(int vect[],int dim)
     int temp;
 
     printvect(vect,dim);
-    for(i=0; i<dim; i+)
+    for(i=0; i<dim; i++)
     {
         for(j=i+1; j<dim; j++)
         if(vect[i]>vect[j])

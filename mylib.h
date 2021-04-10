@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define MAXVETT 10
+#define MAXVETT 20
 
 //FUNZIONE DI LETTURA VETTORE
 int insvect(int vect[]);
@@ -12,4 +12,4 @@ int ord_sost (int vect[],int dim);
 
 //blabla PER SELEZIONE
 
-//
+//blabla PER INSERZIONE
