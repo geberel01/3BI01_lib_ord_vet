@@ -40,23 +40,59 @@ int printvect(int vect[],int dim)
     return 0;
 }
 
-int sost_sort(int vect[], int dim)
+int sost_sort(int vettore[], int dim)
 {
+  int i,j,tmp;
  for(int i=0; i<(dim-1); i++)
   {
-    for(j=i+1; j<dim; y++)
+    for(j=i+1; j<dim; j++)
     {
-     if(vettore[x]>vettore[y]) {
-       tmp= vettore[x];
-       vettore[x]=vettore[y];
-       vettore[y]= tmp;
-       printvect(vettore, quanti);
+     if(vettore[i]>vettore[j]) {
+       tmp= vettore[i];
+       vettore[i]=vettore[j];
+       vettore[j]= tmp;
+       printvect(vettore, dim);
      }
            
     }
 
   }
+return 0;
+}
 
+int bubble_sort (int vettore[], int dim){
+  int x,y,tmp;
+  for(x=0; x<dim; x++)
+ {
+   for(y=x+1; y<dim; y++)
+     if(vettore[x]>vettore[y])
+     {
+       tmp=vettore[x];
+       vettore[x]=vettore[y];
+       vettore[y]=tmp;
+       printvect(vettore,dim);
+     }
+ }
+return 0;
+}
+
+int selection_sort (int vettore[], int dim){
+int i, j, tmp, min;
+  for (i = 0; i < dim-1; i++)
+    {
+        min= i;
+        for (j = i+1; j < dim; j++)
+        {
+        	if (vettore[j] < vettore[min])
+        	{
+        	     min= j;
+        	}
+        }
+        tmp= vettore[min];
+        vettore[min]= vettore[i];
+        vettore[i]= tmp;
+         printvect(vettore,dim);
+    }
 }
 
 //FUNZIONE DI ORDINAMENTO VETTORE PER OSTITUZIONE

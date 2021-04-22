@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "mylib.h"
 
 int main()
 {
@@ -27,18 +28,7 @@ int main()
    scanf("%d",&vettore[x]);
 
  }
- for(x=0; x<quanti; x++)
- {
-   for(y=x+1; y<quanti; y++)
-     if(vettore[x]>vettore[y])
-     {
-       tmp=vettore[x];
-       vettore[x]=vettore[y];
-       vettore[y]=tmp;
-     }
- }
- for(x=0; x<quanti; x++)
-   printf("Valore del vettore: %d \n",vettore[x]);
+  bubble_sort ( vettore, quanti);
  }
 //------------------------------------------------------------------
  //SELETION SORT
@@ -55,23 +45,8 @@ int main()
    printf("Inserire valore del vettore: \n");
    scanf("%d",&vettore[x]);
  }
-
-    for (i = 0; i < quanti-1; i++)
-    {
-        min= i;
-        for (j = i+1; j < quanti; j++)
-        {
-        	if (vettore[j] < vettore[min])
-        	{
-        	     min= j;
-        	}
-        }
-        tmp= vettore[min];
-        vettore[min]= vettore[i];
-        vettore[i]= tmp;
-    }
- for(x=0; x<quanti; x++)
-   printf("Valore del vettore: %d \n",vettore[x]);
+  selection_sort (vettore, quanti);
+ 
  }
  //-----------------------------------------------------------------
  // REPLACEMENT SORT
@@ -87,24 +62,14 @@ int main()
      printf("Inserire valore del vettore: ");
      scanf("%d",&vettore[x]);
     }
-
-  for(x=0; x<(quanti-1); x++)
-  {
-    for(y=x+1; y<quanti; y++)
-    {
-     if(vettore[x]>vettore[y]) {
-       tmp= vettore[x];
-       vettore[x]=vettore[y];
-       vettore[y]= tmp;
-       printvect(vettore, quanti);
-     }
-           
-    }
+    
+    sost_sort( vettore, quanti);
+    
 
   }
    
 
-  }
+  
 //------------------------------------------------------------------
 //INSERTION SORT
 if(scelta==4){
@@ -129,8 +94,6 @@ if(scelta==4){
                 }
 		vettore[y+1]=temp;
 		}
-		for(x=0; x<quanti; x++)
-   printf("Valore del vettore: %d \n",vettore[x]);
- }
+	
 
  }
