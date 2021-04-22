@@ -20,7 +20,7 @@ int main()
  int x, y, tmp, quanti;
  do
  {
-   printf("quanti numeri si vogliono inserire:? \n");
+   printf("quanti numeri si vogliono inserire? \n");
    scanf("%d",&quanti);
  }while((quanti<2)||(quanti>maxV));
  for(x=0; x<quanti; x++){
@@ -61,7 +61,7 @@ int main()
     scanf("%d",& quanti);
    }while((quanti <2)||(quanti >maxV));
     for(x=0; x<quanti; x++){
-     printf("Inserire valore del vettore: ");
+     printf("Inserire valore del vettore: \n");
      scanf("%d",&vettore[x]);
     }
     
@@ -83,7 +83,7 @@ if(scelta==4){
     scanf("%d",& quanti);
    }while((quanti <2)||(quanti >maxV));
     for(x=0; x<quanti; x++){
-     printf("Inserire valore del vettore: ");
+     printf("Inserire valore del vettore: \n");
      scanf("%d",&vettore[x]);
     }
 
