@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "mylib.h"
-
+//stefano olivero esercizio sugli ordinamenti 
 int main()
 {
  int scelta;
@@ -26,9 +26,10 @@ int main()
  for(x=0; x<quanti; x++){
    printf("Inserire valore del vettore: \n");
    scanf("%d",&vettore[x]);
-
  }
+
   bubble_sort ( vettore, quanti);
+
  }
 //------------------------------------------------------------------
  //SELETION SORT
@@ -45,6 +46,7 @@ int main()
    printf("Inserire valore del vettore: \n");
    scanf("%d",&vettore[x]);
  }
+
   selection_sort (vettore, quanti);
  
  }
@@ -85,15 +87,7 @@ if(scelta==4){
      scanf("%d",&vettore[x]);
     }
 
- for(x=1;x<quanti;x++) {
-		temp=vettore[x];
-         y=x-1;
-		while((vettore[y]>temp) && (y>=0)) {
-			vettore[y+1]=vettore[y];
-              y--;
-                }
-		vettore[y+1]=temp;
-		}
-	
-
+  insert_sort( vettore, quanti);
+ 
  }
+}

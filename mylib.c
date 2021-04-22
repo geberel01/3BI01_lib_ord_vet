@@ -93,6 +93,22 @@ int i, j, tmp, min;
         vettore[i]= tmp;
          printvect(vettore,dim);
     }
+    return 0;
+}
+
+int insert_sort(int vettore[], int dim){
+int x,y,tmp;
+for(x=1;x<dim;x++) {
+		tmp=vettore[x];
+         y=x-1;
+		while((vettore[y]>tmp) && (y>=0)) {
+			vettore[y+1]=vettore[y];
+              y--;
+                }
+		vettore[y+1]=tmp;
+    printvect(vettore,dim);
+		}
+    return 0;
 }
 
 //FUNZIONE DI ORDINAMENTO VETTORE PER OSTITUZIONE
