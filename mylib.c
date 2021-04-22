@@ -40,6 +40,25 @@ int printvect(int vect[],int dim)
     return 0;
 }
 
+int sost_sort(int vect[], int dim)
+{
+ for(int i=0; i<(dim-1); i++)
+  {
+    for(j=i+1; j<dim; y++)
+    {
+     if(vettore[x]>vettore[y]) {
+       tmp= vettore[x];
+       vettore[x]=vettore[y];
+       vettore[y]= tmp;
+       printvect(vettore, quanti);
+     }
+           
+    }
+
+  }
+
+}
+
 //FUNZIONE DI ORDINAMENTO VETTORE PER OSTITUZIONE
 int ord_sost(int vect[],int dim) 
 {
@@ -48,7 +67,7 @@ int ord_sost(int vect[],int dim)
     int temp;
 
     printvect(vect,dim);
-    for(i=0; i<dim; i++)
+    for(i=0; i<(dim-1); i++)
     {
         for(j=i+1; j<dim; j++)
         if(vect[i]>vect[j])
@@ -61,3 +80,4 @@ int ord_sost(int vect[],int dim)
   }
     return 0;
 }
+
