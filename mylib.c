@@ -57,7 +57,63 @@ int ord_sost(int vect[],int dim)
             vect[i]=vect[j];
             vect[j]=temp;
             printvect(vect,dim);
-        }
+        }ò
   }
     return 0;
+}
+int ord_ins(int vect[], int dim) {
+  int i;
+    int j;
+    int temp; 
+
+for(i=1;i<dim;i++) { 
+		temp=vect[i]; 
+         j=i-1; 
+		while((vect[j]>temp) && (j>=0)) { 
+			vect[j+1]=vect[j]; 
+              j--;
+                } 
+		vect[j+1]=temp; 
+    printvect(vect,dim);
+ return 0;
+}
+
+int ord_bubble (int vect[], int dim)
+{
+  int i;
+    int j;
+    int tmp;
+ for(i=0; i<dim; i++)
+ {
+   for(j=i+1; j<dim; j++){
+     if(vect[i]>vect[j])
+     {
+       tmp=vect[i];
+       vect[i]=vect[j];
+       vect[j]=tmp;
+       printvect(vect,dim);
+     }
+   }
+     return 0;
+ }
+}
+}
+
+
+int ord_sel(int vect[], int dim)
+{
+  int i, j, a, min;
+ for(i=0; i<dim; i++){ 
+      min=i; 
+      for (j = i+1;j < dim; j++){ 
+         if (a[j]<a[min]) 
+            min=j; 
+      } 
+      t = a[min];
+      a[min] = a[i]; 
+      a[i] = t;  
+       printvect(vect,dim);
+    }
+    return 0;
+}
 }

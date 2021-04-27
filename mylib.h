@@ -13,3 +13,5 @@ int ord_sost (int vect[],int dim);
 //blabla PER SELEZIONE
 
 //blabla PER INSERZIONE
+
+int ord_sel(int vect[], int dim);
